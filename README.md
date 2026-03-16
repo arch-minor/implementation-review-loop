@@ -42,7 +42,7 @@ docs/implementation-plans/my-plan.md の実装を開始
 
 ```bash
 uv pip install -e .
-uvx --from skills/implementation-review-loop agent-loop --help
+uv run --directory skills/implementation-review-loop agent-loop --help
 ```
 
 ### Layout
