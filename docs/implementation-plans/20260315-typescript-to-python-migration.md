@@ -158,7 +158,7 @@ PyPI への公開（パッケージ名の確保・公開ワークフロー構築
 
 2. **JSON Schema ファイル**: `code-review-output.schema.json`, `implementer-output.schema.json`, `plan-review-output.schema.json`
 
-3. **ファイル構造**: `.agent-loop/config.json`, `.loop/runs/`, `docs/implementation-plans/`, `docs/plan-reviews/`, `docs/implementation-reviews/`
+3. **ファイル構造**: `.agent-loop/config.json`, `.agent-loop/runs/`, `docs/implementation-plans/`, `docs/plan-reviews/`, `docs/implementation-reviews/`
 
 4. **出力フォーマット**: `state.json`, `finding-ledger.json`, Markdown レビューレコード
 

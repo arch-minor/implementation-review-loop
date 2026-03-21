@@ -34,7 +34,7 @@ def _write_compat_loop_config(
                 "configVersion": 1,
                 "plansDir": "docs/implementation-plans",
                 "reviewsDir": "docs/plan-reviews",
-                "runDir": ".loop/runs",
+                "runDir": ".agent-loop/runs",
                 "maxAttempts": 3,
                 "prompts": {
                     "implementer": ".agent-loop/prompts/implementer.md",

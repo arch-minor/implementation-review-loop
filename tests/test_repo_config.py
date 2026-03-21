@@ -34,7 +34,7 @@ def test_loads_compat_loop_config(tmp_path: Path) -> None:
                 "configVersion": 1,
                 "plansDir": "plans",
                 "reviewsDir": "reviews",
-                "runDir": ".loop/runs",
+                "runDir": ".agent-loop/runs",
                 "maxAttempts": 4,
                 "prompts": {
                     "implementer": ".agent-loop/prompts/implementer.md",
@@ -69,7 +69,7 @@ def test_accepts_claude_as_compat_loop_provider(tmp_path: Path) -> None:
                 "configVersion": 1,
                 "plansDir": "plans",
                 "reviewsDir": "reviews",
-                "runDir": ".loop/runs",
+                "runDir": ".agent-loop/runs",
                 "maxAttempts": 4,
                 "prompts": {
                     "implementer": ".agent-loop/prompts/implementer.md",
@@ -153,7 +153,7 @@ def test_loads_compat_loop_with_default_provider(tmp_path: Path) -> None:
                 "configVersion": 1,
                 "plansDir": "plans",
                 "reviewsDir": "reviews",
-                "runDir": ".loop/runs",
+                "runDir": ".agent-loop/runs",
                 "maxAttempts": 4,
                 "prompts": {
                     "implementer": ".agent-loop/prompts/implementer.md",

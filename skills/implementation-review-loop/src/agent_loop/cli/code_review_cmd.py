@@ -44,7 +44,7 @@ DEFAULT_AGENT_COMMAND_TIMEOUT_MS = 1_200_000
 CHANGED_FILE_DETECTION_TIMEOUT_MS = 10_000
 CHANGED_FILE_FALLBACK_EXCLUDED_DIRS = frozenset([
     ".git",
-    ".loop",
+    ".agent-loop",
     "dist",
     "node_modules",
 ])

@@ -14,7 +14,7 @@ def test_validates_compat_loop_repo(tmp_path: Path) -> None:
     # Create directories
     (tmp_path / "docs" / "implementation-plans").mkdir(parents=True)
     (tmp_path / "docs" / "plan-reviews").mkdir(parents=True)
-    (tmp_path / ".loop" / "runs").mkdir(parents=True)
+    (tmp_path / ".agent-loop" / "runs").mkdir(parents=True)
     (tmp_path / ".agent-loop" / "prompts").mkdir(parents=True)
 
     # Create config
@@ -24,7 +24,7 @@ def test_validates_compat_loop_repo(tmp_path: Path) -> None:
                 "configVersion": 1,
                 "plansDir": "docs/implementation-plans",
                 "reviewsDir": "docs/plan-reviews",
-                "runDir": ".loop/runs",
+                "runDir": ".agent-loop/runs",
                 "maxAttempts": 3,
                 "prompts": {
                     "implementer": ".agent-loop/prompts/implementer.md",
@@ -60,7 +60,7 @@ def test_validates_compat_loop_repo(tmp_path: Path) -> None:
     assert result.mode == "compat-loop"
     assert "plansDir (docs/implementation-plans)" in result.checked_items
     assert "reviewsDir (docs/plan-reviews)" in result.checked_items
-    assert "runDir (.loop/runs)" in result.checked_items
+    assert "runDir (.agent-loop/runs)" in result.checked_items
     assert "checksFile (.agent-loop/checks.json): 2 commands" in result.checked_items
 
 
@@ -97,7 +97,7 @@ def test_validates_delegated_repo(tmp_path: Path) -> None:
 def test_fails_when_checks_file_is_missing(tmp_path: Path) -> None:
     (tmp_path / "docs" / "implementation-plans").mkdir(parents=True)
     (tmp_path / "docs" / "plan-reviews").mkdir(parents=True)
-    (tmp_path / ".loop" / "runs").mkdir(parents=True)
+    (tmp_path / ".agent-loop" / "runs").mkdir(parents=True)
     (tmp_path / ".agent-loop" / "prompts").mkdir(parents=True)
 
     (tmp_path / ".agent-loop" / "config.json").write_text(
@@ -106,7 +106,7 @@ def test_fails_when_checks_file_is_missing(tmp_path: Path) -> None:
                 "configVersion": 1,
                 "plansDir": "docs/implementation-plans",
                 "reviewsDir": "docs/plan-reviews",
-                "runDir": ".loop/runs",
+                "runDir": ".agent-loop/runs",
                 "maxAttempts": 3,
                 "prompts": {
                     "implementer": ".agent-loop/prompts/implementer.md",
